@@ -4,15 +4,9 @@ const Form = ({ setSueldo, setFecha }) => {
   const handleClick = () => {
     const s = document.querySelector("#sueldo");
     const f = document.querySelector("#fecha");
-    if (s.value == "") {
-      s.classList.toggle("error");
-    }
-    if (f.value == "") {
-      f.classList.toggle("error");
-    }
+    s.value == "" ? s.classList.add("error") : s.classList.remove("error");
+    f.value == "" ? f.classList.add("error") : f.classList.remove("error");
     if (f.value != "" && s.value != "") {
-      s.classList.remove("error");
-      f.classList.remove("error");
       setSueldo(s.value);
       setFecha(f.value);
     }
@@ -20,8 +14,10 @@ const Form = ({ setSueldo, setFecha }) => {
 
   return (
     <div className="flex flex-col w-3/4 justify-around items-center my-8 p-8 rounded-lg shadow-lg bg-slate-50">
-      <h1>Ingresá tu sueldo y la fecha de cobro</h1>
-      <div className="flex flex-col">
+      <h1 className="text-xl font-light bg-lime-300 py-3 px-7 -skew-x-6">
+        Ingresá el monto y la fecha de cobro
+      </h1>
+      <div className="flex flex-col w-1/2 text-lg">
         <input
           placeholder="Sueldo"
           type="text"
