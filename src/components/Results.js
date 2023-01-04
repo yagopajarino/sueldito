@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from "../api/api.js";
 import Tira from "./Tira.js";
+import Spinner from "./Spinner.js";
 
 const Results = ({ fecha, sueldo }) => {
   const [data, setData] = useState(-1);
@@ -50,7 +51,7 @@ const Results = ({ fecha, sueldo }) => {
     console.log(inflacion, ripte, blue, oficial);
   }, [inflacion, ripte, blue, oficial]);
 
-  return (
+  const results = (
     <div className="flex flex-col w-3/4 justify-around items-center my-8 p-8 rounded-lg shadow-lg bg-slate-50">
       <p className="text-xl font-light bg-lime-300 p-3 -skew-x-6">
         El {fecha} cobrabas{" "}
@@ -67,6 +68,8 @@ const Results = ({ fecha, sueldo }) => {
       </div>
     </div>
   );
+
+  return <>{data == -1 ? <Spinner /> : results}</>;
 };
 
 export default Results;
