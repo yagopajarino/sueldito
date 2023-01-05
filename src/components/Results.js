@@ -21,7 +21,7 @@ const Results = ({ fecha, sueldo }) => {
       rMes = "12";
       rAño = año - 1;
     }
-    return `${rAño}-${rMes}`;
+    return `${rAño}-${new String(rMes).padStart(2, "0")}`;
   };
 
   useEffect(() => {
@@ -61,6 +61,13 @@ const Results = ({ fecha, sueldo }) => {
         , hoy deberías cobrar...
       </p>
       <div className="my-3 py-5 w-full flex flex-col items-center">
+        <div className="text-2xl grid grid-cols-3 text-center font-semibold w-3/4 items-center text-xl px-7 py-2 ">
+          <h1 className="font-bold text-left"></h1>
+          <p className="font-bold">Monto</p>
+          <div className="text-right flex justify-end">
+            <p className="font-bold text-left">Ajuste</p>
+          </div>
+        </div>
         <Tira props={{ sueldo, factor: inflacion, nombre: "Inflación" }} />
         <Tira props={{ sueldo, factor: ripte, nombre: "Ripte" }} />
         <Tira props={{ sueldo, factor: oficial, nombre: "Dolar Oficial" }} />
