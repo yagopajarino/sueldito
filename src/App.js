@@ -23,8 +23,8 @@ function App() {
       <div className="w-full flex items-center flex-col">
         <h1 className="text-5xl py-8 text-center">Sueldito</h1>
         <p className="text-center text-xl font-light">
-          Conocé cuanto deberías cobrar ajustando tu sueldo pasado por
-          inflación, ripte, dolar oficial y paralelo.
+          Conocé cuanto deberías cobrar ajustando tu sueldo por inflación,
+          ripte, dólar oficial y paralelo.
         </p>
 
         {showResults ? (
