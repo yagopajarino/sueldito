@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sueldito/static/css/main.db05483f.css",
+    "main.js": "/sueldito/static/js/main.ad0e6048.js",
+    "index.html": "/sueldito/index.html",
+    "main.db05483f.css.map": "/sueldito/static/css/main.db05483f.css.map",
+    "main.ad0e6048.js.map": "/sueldito/static/js/main.ad0e6048.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db05483f.css",
+    "static/js/main.ad0e6048.js"
+  ]
+}
