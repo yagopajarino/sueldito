@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     api.ping();
-  });
+  }, []);
 
   useEffect(() => {
     setShowResults(sueldo != 0);
