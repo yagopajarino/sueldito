@@ -30,25 +30,25 @@ const Form = ({ setSueldo, setFecha }) => {
   };
 
   return (
-    <div className="flex flex-col w-3/4 justify-around items-center my-8 p-8 rounded-lg shadow-lg bg-slate-50">
-      <h1 className="text-xl font-light bg-lime-300 py-3 px-7 -skew-x-6">
+    <div className="md:flex flex-col w-full md:w-3/4 justify-around items-center my-8 py-8 px-3 md:px-8 md:rounded-lg md:shadow-lg bg-slate-50">
+      <h1 className="text-xl font-light bg-lime-300 py-3 px-7 md:-skew-x-6">
         Ingresá el monto y la fecha de cobro
       </h1>
-      <div className="flex flex-col w-1/2 text-lg">
+      <div className="md:flex flex-col md:w-1/2 text-lg">
         <input
           placeholder="Sueldo"
           type="text"
           id="sueldo"
-          className="p-3 my-3 rounded-md border focus-visible:outline-none transition-colors"
+          className="w-full p-3 my-3 rounded-md border focus-visible:outline-none transition-colors"
         ></input>
         <input
           placeholder="dd/mm/aaaa"
           type="text"
           id="fecha"
-          className="p-3 my-3 rounded-md border focus-visible:outline-none transition-colors"
+          className="w-full p-3 my-3 rounded-md border focus-visible:outline-none transition-colors"
         ></input>
       </div>
-      <button onClick={handleClick} className=" w-fit">
+      <button onClick={handleClick} className="w-full md:w-fit">
         Calcular
       </button>
     </div>

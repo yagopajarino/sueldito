@@ -52,16 +52,16 @@ const Results = ({ fecha, sueldo }) => {
   }, [inflacion, ripte, blue, oficial]);
 
   const results = (
-    <div className="flex flex-col w-3/4 justify-around items-center my-8 p-8 rounded-lg shadow-lg bg-slate-50">
-      <p className="text-xl font-light bg-lime-300 p-3 -skew-x-6">
+    <div className="md:flex flex-col w-full md:w-3/4 justify-around items-center my-8 md:p-8 md:rounded-lg md:shadow-lg bg-slate-50">
+      <p className="text-xl font-light bg-lime-300 p-3 md:-skew-x-6">
         El {fecha} cobrabas{" "}
         {sueldo.toLocaleString(undefined, {
           maximumFractionDigits: 2,
         })}
         , hoy deberías cobrar...
       </p>
-      <div className="my-3 py-5 w-full flex flex-col items-center">
-        <div className="text-2xl grid grid-cols-3 text-center font-semibold w-3/4 items-center text-xl px-7 py-2 ">
+      <div className="my-3 py-5 w-full md:flex flex-col items-center">
+        <div className="text-2xl grid grid-cols-3 text-center font-semibold md:w-3/4 items-center px-7 py-2 ">
           <h1 className="font-bold text-left"></h1>
           <p className="font-bold">Monto</p>
           <div className="text-right flex justify-end">
